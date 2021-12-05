@@ -53,14 +53,15 @@ public class ContractsImplFaker implements Contracts {
                     faker.internet().url(),
                     faker.internet().url(),
                     faker.backToTheFuture().quote(),
-                    faker.starTrek().villain(),
+                    faker.artist().name(),
                     ZonedDateTime.now(ZoneId.of("-4"))
             );
 
             newsList.add(news);
 
         }
-        return null;
+
+        return newsList;
     }
 
 }

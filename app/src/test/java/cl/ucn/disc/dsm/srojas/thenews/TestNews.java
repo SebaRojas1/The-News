@@ -67,6 +67,88 @@ public final class TestNews {
             Assertions.assertNotNull(news.getPublishedAt(), "The PublishedAt was null");
         }
 
+        // Constructor not ok
+        {
+            Assertions.assertThrows(IllegalArgumentException.class, () -> {
+                new News(
+                        null,
+                        "Fuente",
+                        "Seba Rojas",
+                        "https://www.noticias.ucn.cl/destacado/con-entrega-de-reconocimientos-se-desarrollo-x-encuentro-de-investigacion-ucn/",
+                        "https://www.noticias.ucn.cl/wp-content/uploads/2021/11/WhatsApp-Image-2021-11-25-at-14.59.39.jpeg",
+                        "Con una emotiva entrega de reconocimientos culminó el X Encuentro de Investigación de la Universidad Católica del Norte (UCN), evento que tradicionalmente se desarrolla todos los años y que es organizado por la Vicerrectoría de Investigación y Desarrollo Tecnológico (VRIDT) de la casa de estudios.",
+                        "Con entrega de reconocimientos se desarrolló X Encuentro de Investigación UCN",
+                        ZonedDateTime.now(ZoneId.of("-4"))
+                );
+            });
+
+            Assertions.assertThrows(IllegalArgumentException.class, () -> {
+                new News(
+                        "Titulo",
+                        null,
+                        "Seba Rojas",
+                        "https://www.noticias.ucn.cl/destacado/con-entrega-de-reconocimientos-se-desarrollo-x-encuentro-de-investigacion-ucn/",
+                        "https://www.noticias.ucn.cl/wp-content/uploads/2021/11/WhatsApp-Image-2021-11-25-at-14.59.39.jpeg",
+                        "Con una emotiva entrega de reconocimientos culminó el X Encuentro de Investigación de la Universidad Católica del Norte (UCN), evento que tradicionalmente se desarrolla todos los años y que es organizado por la Vicerrectoría de Investigación y Desarrollo Tecnológico (VRIDT) de la casa de estudios.",
+                        "Con entrega de reconocimientos se desarrolló X Encuentro de Investigación UCN",
+                        ZonedDateTime.now(ZoneId.of("-4"))
+                );
+            });
+
+            Assertions.assertThrows(IllegalArgumentException.class, () -> {
+                new News(
+                        "Titulo",
+                        "Fuente",
+                        null,
+                        "https://www.noticias.ucn.cl/destacado/con-entrega-de-reconocimientos-se-desarrollo-x-encuentro-de-investigacion-ucn/",
+                        "https://www.noticias.ucn.cl/wp-content/uploads/2021/11/WhatsApp-Image-2021-11-25-at-14.59.39.jpeg",
+                        "Con una emotiva entrega de reconocimientos culminó el X Encuentro de Investigación de la Universidad Católica del Norte (UCN), evento que tradicionalmente se desarrolla todos los años y que es organizado por la Vicerrectoría de Investigación y Desarrollo Tecnológico (VRIDT) de la casa de estudios.",
+                        "Con entrega de reconocimientos se desarrolló X Encuentro de Investigación UCN",
+                        ZonedDateTime.now(ZoneId.of("-4"))
+                );
+            });
+
+            Assertions.assertThrows(IllegalArgumentException.class, () -> {
+                new News(
+                        "Titulo",
+                        "Fuente",
+                        "Seba Rojas",
+                        "https://www.noticias.ucn.cl/destacado/con-entrega-de-reconocimientos-se-desarrollo-x-encuentro-de-investigacion-ucn/",
+                        "https://www.noticias.ucn.cl/wp-content/uploads/2021/11/WhatsApp-Image-2021-11-25-at-14.59.39.jpeg",
+                        null,
+                        "Con entrega de reconocimientos se desarrolló X Encuentro de Investigación UCN",
+                        ZonedDateTime.now(ZoneId.of("-4"))
+                );
+            });
+
+            Assertions.assertThrows(IllegalArgumentException.class, () -> {
+                new News(
+                        "Titulo",
+                        "Fuente",
+                        "Seba Rojas",
+                        "https://www.noticias.ucn.cl/destacado/con-entrega-de-reconocimientos-se-desarrollo-x-encuentro-de-investigacion-ucn/",
+                        "https://www.noticias.ucn.cl/wp-content/uploads/2021/11/WhatsApp-Image-2021-11-25-at-14.59.39.jpeg",
+                        "Con una emotiva entrega de reconocimientos culminó el X Encuentro de Investigación de la Universidad Católica del Norte (UCN), evento que tradicionalmente se desarrolla todos los años y que es organizado por la Vicerrectoría de Investigación y Desarrollo Tecnológico (VRIDT) de la casa de estudios.",
+                        null,
+                        ZonedDateTime.now(ZoneId.of("-4"))
+                );
+            });
+
+            Assertions.assertThrows(IllegalArgumentException.class, () -> {
+                new News(
+                        "Titulo",
+                        "Fuente",
+                        "Seba Rojas",
+                        "https://www.noticias.ucn.cl/destacado/con-entrega-de-reconocimientos-se-desarrollo-x-encuentro-de-investigacion-ucn/",
+                        "https://www.noticias.ucn.cl/wp-content/uploads/2021/11/WhatsApp-Image-2021-11-25-at-14.59.39.jpeg",
+                        "Con una emotiva entrega de reconocimientos culminó el X Encuentro de Investigación de la Universidad Católica del Norte (UCN), evento que tradicionalmente se desarrolla todos los años y que es organizado por la Vicerrectoría de Investigación y Desarrollo Tecnológico (VRIDT) de la casa de estudios.",
+                        "Con entrega de reconocimientos se desarrolló X Encuentro de Investigación UCN",
+                        null
+                );
+            });
+        }
+
+
     }
 
 }
