@@ -17,40 +17,21 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package cl.ucn.disc.dsm.srojas.thenews;
-
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+package cl.ucn.disc.dsm.srojas.thenews.services;
 
 import java.util.List;
 
+import cl.ucn.disc.dsm.srojas.thenews.model.News;
+
 /**
+ * The Contracts of the News project
  * @author Sebastián Rojas
  */
-public class TestContractsImplFaker {
+public interface Contracts {
 
     /**
-     * Testing the Constructor.
+     * @return all the News in the backend ordered by publishedAt.
      */
-    @Test
-    public void testConstructor() {
-
-    }
-
-    /**
-     * Testing the RetrieveNews.
-     */
-    @Test
-    public void testRetrieveNews() {
-
-        final Contracts contracts = new ContractsImplFaker();
-        Assertions.assertNotNull(contracts, "Contracts was null");
-
-        final int N = 10;
-        final List<News> listNews = contracts.retrieveNews(N);
-        Assertions.assertNotNull(listNews, "ListNews was null");
-        Assertions.assertEquals(N, listNews.size(), "Wrong number of elements");
-
-    }
+    List<News> retrieveNews(int size);
 
 }

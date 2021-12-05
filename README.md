@@ -5,25 +5,26 @@ Android Project to display News.
 
 ```puml
 @startuml
-package org.threeten.bp {
-    class ZonedDateTime {
-        ...
+package externals* #ffcccc {
+    package org.threeten.bp {
+        class ZonedDateTime {
+            ...
+        }
+        class ZoneId {
+            ...
+        }
     }
-    class ZoneId {
-        ...
+    package net.openhft.hashing {
+        class LongHashFunction {
+            ...
+        }
+    }
+    package com.github.javafaker {
+        class Faker {
+            ...
+        }
     }
 }
-package net.openhft.hashing {
-    class LongHashFunction {
-        ...
-    }
-}
-package com.github.javafaker {
-    class Faker {
-        ...
-    }
-}
-    
 package cl.ucn.disc.dsm.news {
     
     package model #ccffcc {

@@ -17,19 +17,44 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package cl.ucn.disc.dsm.srojas.thenews;
+package cl.ucn.disc.dsm.srojas.thenews.services;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import cl.ucn.disc.dsm.srojas.thenews.model.News;
+import cl.ucn.disc.dsm.srojas.thenews.services.Contracts;
+import cl.ucn.disc.dsm.srojas.thenews.services.ContractsImplFaker;
+
 /**
- * The Contracts of the News project
  * @author Sebastián Rojas
  */
-public interface Contracts {
+public class TestContractsImplFaker {
 
     /**
-     * @return all the News in the backend ordered by publishedAt.
+     * Testing the Constructor.
      */
-    List<News> retrieveNews(int size);
+    @Test
+    public void testConstructor() {
+
+    }
+
+    /**
+     * Testing the RetrieveNews.
+     */
+    @Test
+    public void testRetrieveNews() {
+
+        final Contracts contracts = new ContractsImplFaker();
+        Assertions.assertNotNull(contracts, "Contracts was null");
+
+        final int N = 10;
+        final List<News> listNews = contracts.retrieveNews(N);
+        Assertions.assertNotNull(listNews, "ListNews was null");
+        Assertions.assertEquals(N, listNews.size(), "Wrong number of elements");
+
+    }
 
 }

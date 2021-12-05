@@ -17,7 +17,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package cl.ucn.disc.dsm.srojas.thenews;
+package cl.ucn.disc.dsm.srojas.thenews.services;
 
 import com.github.javafaker.Faker;
 
@@ -26,6 +26,9 @@ import org.threeten.bp.ZonedDateTime;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cl.ucn.disc.dsm.srojas.thenews.model.News;
+import cl.ucn.disc.dsm.srojas.thenews.services.Contracts;
 
 /**
  * Contract Implementation of News with Faker

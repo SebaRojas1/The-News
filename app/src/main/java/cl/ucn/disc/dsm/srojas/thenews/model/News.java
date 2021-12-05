@@ -17,7 +17,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package cl.ucn.disc.dsm.srojas.thenews;
+package cl.ucn.disc.dsm.srojas.thenews.model;
 
 import net.openhft.hashing.LongHashFunction;
 
