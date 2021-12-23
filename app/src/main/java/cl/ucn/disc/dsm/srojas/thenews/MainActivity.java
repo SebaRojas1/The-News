@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         listNews = new ArrayList<String>();
 
         for (int i=0; i<50; i++) {
-            listNews.add("Dato "+ i +"");
+            listNews.add("Noticia "+ i +"");
         }
 
         NewsAdapter adapter = new NewsAdapter(listNews);
